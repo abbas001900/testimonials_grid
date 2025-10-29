@@ -100,13 +100,67 @@ h3 {
     overflow: hidden;
     border-left: 6px solid transparent;
     border-top: 6px solid transparent;
-    border-image: linear-gradient(90deg,
+    border-image: var(--subComment-gradient) 1;
+}
+
+.subComment--kina {
+    --subComment-gradient: linear-gradient(90deg,
             #ff6b6b,
-            #4ecdc4,
             #45b7d1,
+            #f9ca24);
+}
+
+.subComment--mhd {
+    --subComment-gradient: linear-gradient(90deg,
+            #45b7d1,
+            #ff6b6b,
+            #45b7d1,
+            #f9ca24
+        );
+}
+
+.subComment--djingo {
+    --subComment-gradient: linear-gradient(90deg,
+            #45b7d1,
+            #ff6b6b,
+            #45b7d1,
+            #f9ca24);
+}
+
+.subComment--yacoubou {
+    --subComment-gradient: linear-gradient(90deg,
             #f9ca24,
+            #ff6b6b,
+            #45b7d1,
+            #f9ca24
+            );
+}
+
+.subComment--mariam {
+    --subComment-gradient: linear-gradient(90deg,
             #a55eea,
-            #26de81) 1;
+            #ff6b6b,
+            #45b7d1,
+            #f9ca24
+            );
+}
+
+.subComment--haoua {
+    --subComment-gradient: linear-gradient(90deg,
+            #26de81,
+            #ff6b6b,
+            #45b7d1,
+            #f9ca24
+            );
+}
+
+.subComment--yacouba {
+    --subComment-gradient: linear-gradient(90deg,
+            #f9ca24,
+            #ff6b6b,
+            #45b7d1,
+            #f9ca24
+            );
 }
 
 .comment--kina {
