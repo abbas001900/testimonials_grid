@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --background-principal: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --stars: #ffd700;
+    --testimonial-border-color: linear-gradient(#ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #a55eea, #26de81);
+    --header-text: white;
+    --testimonial-card-background: white;
+    --normal-testimonial-card-shadow: rgba(0, 0, 0, 0.2);
+    --hover-testimonial-card-shadow: rgba(0, 0, 0, 0.3);
+    --avatar-border: #f0f0f0;
+    --user-info-h3: #333;
+    --user-info-paragraph: #666;
+    --quote-text: #555;
+    --quote-icon-color: #e0e0e0;
+    --header-h1-desktop-font-size: 2.5rem;
+    --header-h1-mobile-font-size: 2rem;
+    --header-paragraphe-font-size: 1.2rem;
+    --user-info-h3-font-size: 1.2rem;
+    --user-info-paragraph-font-size: 0.9rem;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem;
+    padding: 3rem 6vw;
+    min-height: 100vh;
+    background: var(--background-principal);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--header-text);
+    grid-column: span 6;
+    text-align: center;
+}
+
+header h1 {
+    font-size: var(--header-h1-desktop-font-size);
+}
+
+header p {
+    font-size: var(--header-paragraphe-font-size);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr) 150px;
+    flex-wrap: wrap;
+    grid-column: span 6;
+    gap: 2rem;
+}
+
+img {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--quote-icon-color);
+    grid-column: span 1;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+h3 {
+    color: var(--user-info-h3);
+    font-size: var(--user-info-h3-font-size);
+}
+
+.comment {
+    height: fit-content;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 3px 6px 2px var(--normal-testimonial-card-shadow);
+    transition: all 0.3s ease;
+}
+
+.comment:hover {
+    box-shadow: 12px 24px 10px var(--hover-testimonial-card-shadow);
+    transform: translateY(-8px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.subComment {
+    background-color: var(--testimonial-card-background);
+    display: grid;
+    grid-template-columns: 5rem auto 7rem;
+    grid-template-rows: 4.2rem 7.5rem;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    border-left: 6px solid transparent;
+    border-top: 6px solid transparent;
+    border-image: linear-gradient(90deg,
+            #ff6b6b,
+            #4ecdc4,
+            #45b7d1,
+            #f9ca24,
+            #a55eea,
+            #26de81) 1;
+}
+
+.comment--kina {
+    grid-column: span 4;
+}
+
+.comment--mhd {
+    grid-column: span 2;
+}
+
+.comment--djingo {
+    grid-column: span 2;
+}
+
+.comment--yacoubou {
+    grid-column: span 2;
+}
+
+.comment--mariam {
+    grid-column: span 4;
+}
+
+.comment--haoua {
+    grid-column: span 2;
+}
+
+.comment--yacouba {
+    grid-column: span 2;
+    height: auto;
+}
+
+.identification {
+    grid-column: span 1;
+    align-self: center;
+}
+
+.identification p {
+    color: var(--user-info-paragraph);
+    font-size: var(--user-info-paragraph-font-size);
+}
+
+.testimonials {
+    color: var(--quote-text);
+    grid-column: span 3;
+    padding: 1rem;
+    font-style: italic;
+}
+
+.stars {
+    align-self: center;
+}
+
+.fa-star {
+    color: var(--stars);
+    font-size: 1.2rem !important;
+}
+
+@media screen and (max-width: 1439px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr) 150px;
+    }
+
+    .comment--kina {
+        grid-column: span 1;
+    }
+
+    .comment--mhd {
+        grid-column: span 1;
+    }
+
+    .comment--djingo {
+        grid-column: span 1;
+    }
+
+    .comment--yacoubou {
+        grid-column: span 1;
+    }
+
+    .comment--mariam {
+        grid-column: span 1;
+    }
+
+    .comment--haoua {
+        grid-column: span 1;
+    }
+
+    .comment--yacouba {
+        grid-column: span 1;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        grid-template-rows: repeat(6, 1fr) 250px;
+    }
+
+    header h1 {
+        font-size: var(--header-h1-mobile-font-size);
+    }
+
+    .subComment {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 1rem;
+    }
+
+    .testimonials {
+        grid-column: span 1;
+    }
+
+    .identification {
+        text-align: center;
+    }
+
+    .stars {
+        justify-self: center;
+    }
+}
