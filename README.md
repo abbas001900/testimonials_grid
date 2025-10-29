@@ -31,6 +31,6 @@ A ce niveau, j'ai utilisé des grilles comme le demande l'exercice. j'ai d'abord
 
 ## Liens
 ### liens vers repo github:
-[Github Repositorry](https://github.com/abbas001900/social_proof.git)
+[Github Repositorry](https://github.com/abbas001900/testimonials_grid.git)
 ### liens vers la github page:
-[Github Page](https://abbas001900.github.io/social_proof/)
+[Github Page](https://abbas001900.github.io/testimonials_grid/)
